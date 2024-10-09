@@ -51,9 +51,7 @@ const DrawingCanvas = () => {
       console.error("Error sending data:", error);
     }
   };
-  // console.log(imageData.data);
-  // alert("Pixel values have been logged to the console!");
-
+  
   const clearCanvas = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
@@ -75,7 +73,8 @@ const DrawingCanvas = () => {
       <br />
       <button onClick={sendData}>Get Result</button>
       <button onClick={clearCanvas}>Clear</button>
-      <h2>The number is : {Prediction}</h2>
+      <br />
+      <h1>The number is : {Prediction}</h1>
     </div>
   );
 };
